@@ -21,7 +21,7 @@ fn rocket() -> _ {
     .mount("/", routes![index])
     .mount("/hello", routes![hello_path])
     .configure(rocket::config::Config {
-        address: IpAddr::V4(Ipv4Addr::new(127, 0, 0, 1)),
+        address: IpAddr::V4(Ipv4Addr::new(0, 0, 0, 0)),
         // Alternatively, you can use the following line to specify the address
         // address: "127.0.0.1".parse().unwrap(),
         port: 8888,
