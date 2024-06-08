@@ -39,8 +39,8 @@ jobs:
     - name: Log in to Docker Hub and Push the image
       uses: docker/login-action@v2
       with:
-      username: ${{ secrets.DOCKER_USERNAME }}
-      password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Install Pack CLI
       uses: buildpacks/github-actions/setup-pack@v5.0.0
