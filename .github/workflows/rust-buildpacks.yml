@@ -34,5 +34,5 @@ jobs:
     
     - name: Build and push Docker image using Buildpacks
       run: |
-        pack build ${{ secrets.DOCKER_USERNAME }}/rust-rocket-buildpacks --buildpack docker.io/paketocommunity/rust --path .
+        pack build ${{ secrets.DOCKER_USERNAME }}/rust-rocket-buildpacks --buildpack docker.io/paketocommunity/rust --builder paketobuildpacks/builder-jammy-full --path .
         docker push ${{ secrets.DOCKER_USERNAME }}/rust-rocket-buildpacks:latest
