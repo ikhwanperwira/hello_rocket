@@ -1,1 +1,1 @@
-web: ROCKET_PORT=8888 /workspace/bin/hello_rocket
+web: /workspace/bin/hello_rocket
