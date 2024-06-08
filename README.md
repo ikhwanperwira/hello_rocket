@@ -47,13 +47,15 @@ jobs:
 
     - name: Build the image using the Rust buildpack
       run: |
-      pack build ${{ secrets.DOCKER_USERNAME }}/rust-rocket-buildpacks \
-        --buildpack docker.io/paketocommunity/rust \
-        --builder paketobuildpacks/builder-jammy-full \
-        --path .
+        pack build ${{ secrets.DOCKER_USERNAME }}/rust-rocket-buildpacks \
+          --buildpack docker.io/paketocommunity/rust \
+          --builder paketobuildpacks/builder-jammy-full \
+          --path .
+
     
     - name: Push the image to Docker Hub
       run: docker push ${{ secrets.DOCKER_USERNAME }}/rust-rocket-buildpacks:latest
+
 ```
 
 ## Pushing to Docker Registry
